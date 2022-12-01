@@ -1,0 +1,16 @@
+program MenghitungVolumePrismaSegitiga; //masukkan nama program
+uses crt; //INPUT OUTPUT
+var //TIPE DATA
+    a,t,t_prisma,vol: real;
+    
+begin //MULAI PROGRAM
+    clrscr;
+    write('Alas Segitiga: ');
+    readln(a);
+    write('Tinggi Segitiga: ');
+    readln(t);
+    write('tinggi Prisma:');
+    readln(t_prisma);
+    vol := 1/2 *a*t*t_prisma; //MASUKKAN RUMUS VOLUME
+    writeln('Volume Prisma Segitiga: ',vol :0:2);
+end.//PROGRAM SELESAI

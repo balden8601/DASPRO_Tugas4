@@ -1,0 +1,15 @@
+program Cek3BilanganPalingBesar; //MAASUKKAN NAMA PROGRAM
+uses crt;
+var //TIPE DATA
+    a,b,c:integer;
+    begin//MULAI PROGRAM
+    write('Masukkan nilai bilangan 1 :');
+    readln(a);
+    write('Masukkan nilai bilangan 2 :');
+    readln(b);
+    write('Masukkan nilai bilangan 3 :');
+    readln(c);
+    if (a<b) and (a<c) then writeln (a)else //JIKA NILAI A LEBIH KECIL DARI B DAN JIKA NILAI A LEBIH KECIL DARI C MAKA CETAK A
+    if (b<a) and (b<c) then writeln (b)else// JIKA NILAI B LEBIH KECIL DARI A DAN JIKA NILAI B LEBIH KECIL DARI C MAKA CETAK B 
+    writeln(c);
+end.
