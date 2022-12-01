@@ -1,0 +1,28 @@
+program gaji_pegawai;//masukkan nama program
+uses crt;// input output
+var//jenis data
+gol, lembur : integer;// untuk tipe data bilangan bulat
+gaji, gaji_lembur, gaji_kotor : longint;
+pajak, gaji_bersih : real;//tipe data bilangan desimal
+begin// mulai program
+clrscr;//bersihkan screen
+write('Masukkan Golongan Anda : '); //tampilkan 
+readln(gol);//baca 
+write('Masukkan Jam Lembur Anda : '); //tampilkan
+readln(lembur);//baca
+if (gol = 1) then gaji := 2500000// apabila user menginput gol 1 maka gaji nya 2500000
+else if (gol = 2) then gaji := 3000000// apabila user menginput gol 2 maka gajinya 3000000
+else if (gol = 3) then gaji := 3500000//apabila user menginput gol 3 maka gajinya 3500000
+else begin
+writeln('Golongan Anda tidak terdaftar');//selain gol 1-3 maka tampilkan 
+exit();
+end;
+gaji_lembur := lembur * 50000;
+gaji_kotor := gaji + gaji_lembur;
+pajak := gaji_kotor * 0.05;
+gaji_bersih := gaji_kotor - pajak;
+writeln();
+writeln('Total Pendapatan Anda ', gaji_kotor);//tampilkan 
+writeln('Pajak Penghasilan ', pajak:0:0);//tampilkan
+writeln('Jumlah Gaji yang Anda Terima ', gaji_bersih:0:0);//tampilkan 
+end.//program selesai
